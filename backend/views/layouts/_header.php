@@ -11,18 +11,22 @@ NavBar::begin([
         'class' => 'navbar navbar-expand-md navbar-dark bg-dark ',
     ],
 ]);
+
 $menuItems = [
     ['label' => 'Create', 'url' => ['/site/index']],
 ];
+
 if (Yii::$app->user->isGuest) {
     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 }
 echo Nav::widget([
-    'options' => ['class' => 'navbar-nav me-auto mb-2 mb-md-0'],
+    'options' => ['class' => 'navbar-nav ms-auto mb-2 mb-md-0'],
     'items' => $menuItems,
 ]);
+
+
 if (Yii::$app->user->isGuest) {
-    echo Html::tag('div',Html::a('Login',['/site/login'],['class' => ['btn btn-link login text-decoration-none']]),['class' => ['d-flex']]);
+    echo Html::tag('div', Html::a('Login', ['/site/login'], ['class' => ['btn btn-link login text-decoration-none']]), ['class' => ['d-flex']]);
 } else {
     echo Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
         . Html::submitButton(
@@ -32,5 +36,6 @@ if (Yii::$app->user->isGuest) {
         . Html::endForm();
 }
 
-NavBar::end();
 
+
+NavBar::end();

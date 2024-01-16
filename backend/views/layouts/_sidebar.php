@@ -1,6 +1,6 @@
-<aside class="sidebar shadow-sm">
+<aside class="sidebar shadow">
     <?php echo \yii\bootstrap5\Nav::widget([
-        'options' => ['class' => ' d-flex flex-column nav-pills  '],
+        'options' => ['class' => 'd-flex flex-column nav-pills'],
         'items' => [
             [
                 'label' => 'Dashboard',
@@ -8,7 +8,7 @@
             ],
             [
                 'label' => 'Videos',
-                'url' => '/video/index',
+                'url' => ['/video/index'],
             ],
 
         ]

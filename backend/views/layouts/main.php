@@ -12,9 +12,9 @@ $this->beginContent('@backend/views/layouts/base.php');
 ?>
 
 
-<main role="main" class="d-flex flex-shrink-0 vh-100">
+<main role="main" class="d-flex flex-shrink-0 h-100">
     <?php echo $this->render('_sidebar'); ?>
-    <div class="content-wrapper p-3">
+    <div class="content-wrapper p-3 w-100">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
@@ -25,4 +25,4 @@ $this->beginContent('@backend/views/layouts/base.php');
 
 
 
-<?php $this->endContent();?>
+<?php $this->endContent(); ?>

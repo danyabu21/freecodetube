@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Video $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'video_id' => $model->video_id]);
-                 }
+                }
             ],
         ],
     ]); ?>
